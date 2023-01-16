@@ -1,4 +1,5 @@
 //fonction
+//initialise un tableau avec des valeur de 1 a 9 repartie aleatoirement  dans le tableau
 function initListe (){
     numberTab=[1,2,3,4,5,6,7,8,9],val=0,compteur=0,tabListe=[liste1=[],liste2=[],liste3=[]];
     for (let i = 0;i < 8; i++){
@@ -10,12 +11,12 @@ function initListe (){
     tabListe [2][2] = numberTab[0];
     return tabListe;
 }
-
+//permet d'assigner une valeur a une case du tableau remplis de 0
 function revelation (index1,index2,listeVide,liste){
     listeVide [index1][index2] = liste [index1][index2];
     return listeVide;
 }
-
+//affichage du tableau 3*3
 function affichage (liste){
     let compteur =0,message="   __1_____2____3\n";
     for (let i = 0;i <= 8; i++){
@@ -33,7 +34,7 @@ function affichage (liste){
     console.log(message);
     return message;
 }
-
+//demande d'une valeur tant que la valeur entrer n'est pas entre 1 et 3
 function demandeValeur (liste,message){
     let entry = 0;
     while (entry<1 || entry>3){
@@ -41,7 +42,7 @@ function demandeValeur (liste,message){
     }
     return entry;
 }
-
+//calcul de la somme en fonction de la zone selectionner 
 function choisir (val,liste){
     let sens=true;
     switch(val){
@@ -67,6 +68,7 @@ function choisir (val,liste){
         return 0;
     }
 }
+//attribution d'un scrore en fonction de la somme des valeurs selectionner 
 function attributionPoints(val){
     switch(val){
         case 6 :
@@ -105,7 +107,7 @@ function attributionPoints(val){
             return 3600;
     }
 }
-
+//permet de calculer la somme en parcourant les valeur d'une ligne et stoque les valeurs utiliser dans un tableau
 function sommeLigne(ligne,liste){
     let somme =0;
     for (let i = 0; i < 3 ; i++){
@@ -114,6 +116,7 @@ function sommeLigne(ligne,liste){
     }
     return somme;
 }
+//permet de calculer la somme en parcourant les valeurs d'une colone et stoque les valeurs utiliser dans un tableau
 function sommeColone(colone,liste){
     let somme =0;
     for (let i = 0; i < 3 ; i++){
@@ -122,6 +125,7 @@ function sommeColone(colone,liste){
     }
     return somme;
 }
+//permet de calculer la somme en parcourant les valeurs d'une diagonale et stoque les valeurs utiliser dans un tableau
 function sommeDiago (direction,liste){
     letsomme=0;
     if (direction){
@@ -138,7 +142,7 @@ function sommeDiago (direction,liste){
     }
     return somme;
 }
-
+//affiche les valeurs utiliser pour calculer la somme
 function affichagelisteChoix(liste){
     let message="[";
     for(let i in liste){
@@ -147,7 +151,7 @@ function affichagelisteChoix(liste){
     message += " ]";
     return message;
 }
-
+//genenere une valeur aleatoire entre vMin et vMax
 function rndm (vMin,VMax){
 return Math.floor(Math.random() * (VMax+1 - vMin) + vMin);
 }
