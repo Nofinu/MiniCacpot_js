@@ -141,7 +141,7 @@ function sommeDiago (direction,liste){
 }
 
 function affichagelisteChoix(liste){
-    let message="[ ";
+    let message="[";
     for(let i in liste){
         message += " "+liste[i];
     }
