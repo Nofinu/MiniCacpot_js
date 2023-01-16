@@ -2,18 +2,18 @@
 function initListe (){
     numberTab=[1,2,3,4,5,6,7,8,9],val=0,compteur=0,tabListe=[liste1=[],liste2=[],liste3=[]];
     for (let i = 0;i < 8; i++){
-        tabListe[i%3][compteur] = Number(numberTab.splice(rndm(0,8-i), 1))
+        tabListe[i%3][compteur] = Number(numberTab.splice(rndm(0,8-i), 1));
         if(i%3 == 2){
             compteur ++ ;
         }
     }
-    tabListe [2][2] = numberTab[0]
-    return tabListe
+    tabListe [2][2] = numberTab[0];
+    return tabListe;
 }
 
 function revelation (index1,index2,listeVide,liste){
     listeVide [index1][index2] = liste [index1][index2];
-    return listeVide
+    return listeVide;
 }
 
 function affichage (liste){
@@ -63,7 +63,7 @@ function choisir (val,liste){
             sens = false;
             return sommeDiago(sens,liste);
         default :
-        console.log("incorrect")
+        console.log("incorrect");
         return 0;
     }
 }
@@ -145,7 +145,7 @@ function affichagelisteChoix(liste){
         message += " "+liste[i];
     }
     message += " ]";
-    return message
+    return message;
 }
 
 function rndm (vMin,VMax){
@@ -158,7 +158,7 @@ let listeAffichage =[colone1,colone2,colone3],listeStockage=[],listeChoix=[];
 let tours =0,messageGlobal="",teste=true,choix="",somme=0,point=0;
 
 listeStockage = initListe();
-console.table(listeStockage)
+console.table(listeStockage);
 listeAffichage = revelation(rndm(0,2),rndm(0,2),listeAffichage,listeStockage);
 console.table(listeAffichage);
 
@@ -170,7 +170,7 @@ while(tours<3){
 while(teste){
     messageGlobal = `${affichage(listeAffichage)}entrer selon votre choix :\nligne n°x(ex: ligne1)\ncolone n°x(ex: colone1)\ndiagoD(diagonale droite a gauche)\ndiagoGD(diagonale gauche a droite)`;
     choix = prompt(messageGlobal).toLowerCase();
-    console.log(choix)
+    console.log(choix);
     somme = choisir(choix,listeStockage);
     if(somme != 0){
         teste = false;
