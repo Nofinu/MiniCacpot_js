@@ -52,7 +52,6 @@ function choisir (val,liste){
         case "ligne3":
             return sommeLigne(2,liste);
         case "colone1":
-            console.log("3")
             return sommeColone(0,liste);
         case "colone2":
             return sommeColone(1,liste);
