@@ -37,3 +37,6 @@ somme=(21) = 1080<br>
 somme=(22) = 144<br>
 somme=(23) = 1800<br>
 somme =(24) = 3600<br>
+
+
+● Le lien de la page : ➡ [Page pour essayer le jeu!](https://nofinu.github.io/MiniCacpot_js/) ⬅
