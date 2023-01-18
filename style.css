@@ -1,0 +1,29 @@
+h1{
+    text-align: center;
+}
+
+main{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+#grid-container{
+    height: 50%;
+    width: 50%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    display: grid;
+    text-align: center;
+}
+
+.grid-item{
+    margin: 10px;
+}
+
+.grid-item>button{
+    border-radius: 100%;
+    padding: 6px;
+    border: solid rgb(214, 151, 13);
+    background-color: rgb(255, 208, 0);
+}
